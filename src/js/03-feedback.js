@@ -6,6 +6,8 @@ const formBox = document.querySelector('.feedback-form');
 const emailEl = document.querySelector('.feedback-form input');
 const messageEl = document.querySelector('.feedback-form textarea');
 
+emailEl.setAttribute('required', 'true');
+
 formBox.addEventListener('input', throttle(addUserData, 500));
 formBox.addEventListener('submit', onFormSubmit);
 
